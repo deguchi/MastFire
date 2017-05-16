@@ -1,57 +1,89 @@
+(function () {
 
-(function() {
-	var parser = new MMLParser();
+  function playmmlButtonTemplate() {
+    var playmmlButtonTemplate = document.createElement("A");
+    playmmlButtonTemplate.innerHTML = "play";
+    playmmlButtonTemplate.style.cssText = "background-color:#606984;color:#ffffff;font-weight:bold;cursor:pointer;line-height:1.25em;padding:0.3em;border-radius:0.5em;margin-left: 18px; float: right; position: relative; top: -24px;font-size:0.75em";
+    return playmmlButtonTemplate;
+  }
 
-    var looper = new AudioLooper(2048);
-    var master = new MasterChannel();
-    master.setVolume(1);
+  setTimeout(function () {
+    console.log("DOM fully loaded and parsed");
+    var targetContentsList = document.querySelectorAll('.status__content:not(.ox-playflagged):not(.muted)');
+    console.log(targetContentsList)
+    targetContentsList.forEach(function (targetContent) {
+      const sourceText = targetContent.textContent;
+      const playmmlButton = playmmlButtonTemplate().cloneNode(true);
 
-    var player = new TsdPlayer();
-    player.device = new TssChannel();
-    player.device.setPlayer(player);
+      const playmmlAnchor = document.createElement("DIV");
+      playmmlAnchor.id = "playmml_" + Math.round(Math.random() * 1000);
+      const targetId = playmmlAnchor.id;
+      targetContent.appendChild(playmmlAnchor);
+      targetContent.classList.add("ox-playflagged");
 
-    master.addChannel(player.device);
-    player.setMasterChannel(master);
+      // const mml = sourceText.match(/MML@(.*?);/);
+      // console.log(mml)
+      // if (mml) {
+        targetContent.parentNode.appendChild(playmmlButton);
+        playmmlButton.addEventListener('click', function (e) {
 
-    var lastsel = '';
+            console.log('played');
+            // console.log(mml[0]);
+            playmml(sourceText);
+            // playmml(mml[0]);
 
-	document.onkeydown = function (e){
-		var ctrl = (e.ctrlKey || e.metaKey);
-		if (ctrl && e.keyCode === 67) {
+          }
+          , false);
+      // }
+    });
+  }, 1000);
 
-			var sel = String(document.getSelection());
+  console.log('test')
 
-			if (looper.channel) {
-				looper.setChannel(null); // stop
-				if (sel === lastsel) {
-					return;
-				} 
-			}
+  var parser = new MMLParser();
 
-			lastsel = sel;
+  var looper = new AudioLooper(2048);
+  var master = new MasterChannel();
+  master.setVolume(1);
 
-			var tsc = new TssCompiler();
+  var player = new TsdPlayer();
+  player.device = new TssChannel();
+  player.device.setPlayer(player);
 
-			var tssmml = parser.compile(sel);
-			if (e.shiftKey) {
-				console.log(tssmml);
-			}
-			if (tssmml === '') {
-				console.log('MML not found');
-				return;
-			}
+  master.addChannel(player.device);
+  player.setMasterChannel(master);
 
-			var ret = tsc.compile(tssmml);
-			if (ret === null) {
-				console.log("MML compile error");
-			} else {
-				setTimeout(function() {
-				    looper.setChannel(master);
-					player.play(ret);
-				}, 300);
-			}
-		}
-	}
+  // console.log(window)
+  function playmml (mml) {
+    if (looper.channel) {
+      looper.setChannel(null); // stop
+      if (sel === lastsel) {
+        return;
+      }
+    }
+
+    var tsc = new TssCompiler();
+
+    var tssmml = parser.compile(mml);
+    // if (e.shiftKey) {
+    // 	console.log(tssmml);
+    // }
+    if (tssmml === '') {
+      console.log('MML not found');
+      return;
+    }
+
+    var ret = tsc.compile(tssmml);
+    if (ret === null) {
+      console.log("MML compile error");
+    } else {
+      setTimeout(function () {
+        looper.setChannel(master);
+        player.play(ret);
+      }, 300);
+    }
+
+  }
 
 
 })();
