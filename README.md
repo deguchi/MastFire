@@ -1,6 +1,6 @@
-TSSCCjs
+MastoFire
 ====
-Ctrl-C MML Player Chrome extension
+MML Player on Mastodon Chrome extension
 
 ##FEATURES
  - Ctrl-C to play interface
