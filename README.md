@@ -9,6 +9,16 @@ Ctrl-C MML Player Chrome extension
  - support #A-#Z macro
  - support #FM macro
 
+##実装したい機能
+
+MMLの投稿機能
+プレイヤー  
+メタ情報の表示  
+連続再生  
+分割MMLのマージ  
+スキン  
+
+
 ##MML EXAMPLE
 
     #TITLE <TSSCCjs's Theme by aike CC-BY>;
