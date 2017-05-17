@@ -65,7 +65,7 @@ INDEX:何分割の何個目か 例)1/4
     rdrdrdr]frfrfrfrgrgrgrgr;#J=AeAa+BB;#K=C<cr8cr8c>C<c+r8c+r8c+Da2.rDa.d2r8Da2
     .rDa.d2r8;#L=l8Ea<ec>a<e>a<c>a<Ea<ec+>a<e>a<c+>al4<FF>;#M=GGHHHH;#N=l8[8r1]I
 
-    #MML TITLE:TSSCCjs's Theme|CREATOR:aike|LICENSE:CC-BY|INDEX:3/4
+    #MML TITLE:TSSCCjs's Theme|CREATOR:aike|LICENSE:CC-BY|INDEX:3/4||
     [16r1];#O=%3v10ml3q6s5;#P=%3v10mp1,4,1,2,0k1q6s5;#Q=%3q10s3;#FMC3(B2(A));Oo6
     $J;Po6$J;Qp1o6v6$J;#FMC3(B2(A));Oo5p2$K;Po5p2$K;Qp2o5v6p2$K;#FMC3(B2(A));Oo5
     $L;Po5$L;Qo5v4$L;#FMC4(B2(A));%3o4l4v15$q0s1o3M;%3o4l4v13$q0s3o3M;%3o4l4v4$q
