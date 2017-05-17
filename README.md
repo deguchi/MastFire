@@ -21,7 +21,7 @@ MMLの投稿機能
 
 ##MML EXAMPLE
 
-    #TITLE <TSSCCjs's Theme by aike CC-BY>;
+    #MML TITLE:TSSCCjs's Theme|CREATOR:aike|LICENSE:CC-BY
     t165;#A=l4dr8d16e16f2.r8gf8e8f8e.d.ec.d.efr8f16g16a2.r8b-a8g8d8fr8fr8fgr8gr8
     ;#B=d.a2r8g.c+2r8c+.d.ef2.rd.a2r8g.c2r8c+.g.df2.r;#C=l4ar8a16g16a2.r8ga<d8c.
     >a.<c>a.a+.<c>a.b-16<c16d2.r8c.>a+ar8ar8a;#D=a.d8>a8.<d8.f8er8e8e8ef8g.a8a+8
