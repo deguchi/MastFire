@@ -72,7 +72,7 @@ INDEX:何分割の何個目か 例)1/4
     13s1o3M;o6v4q4s4$N;o6v4q4s4k5$N;o6v2q4s4r8.$N;o6v2q4s4k5r8.$N;o8%2q0s50l16v8
     $[16arararaaarararaa][16araaaraaaraaaraa];#R=[7rara]ral16s20;%2q0l4o3s12,18v
 
-    #MML TITLE:TSSCCjs's Theme|CREATOR:aike|LICENSE:CC-BY|INDEX:3/4||
+    #MML TITLE:TSSCCjs's Theme|CREATOR:aike|LICENSE:CC-BY|INDEX:4/4||
     8$Rarrraaaal4s12Raaaaaaaal4s12Rarrraaaal4s12Raaaaaaaal4s12;%3o4v15s1,-15q1l1
     6$[16crrrrrcrcrrrrrcr][16crccrcrccrccrcrc];
 
