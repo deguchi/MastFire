@@ -35,14 +35,14 @@
       targetContent.appendChild(playmmlAnchor);
       targetContent.classList.add("ox-playflagged");
 
-      console.log(sourceText.replace('\n', ''))
-      const mml = sourceText.replace('\n', '').match(/#MML (.*?)\|\|(.*)/);
+      // console.log(sourceText.replace('\n', ''))
+      const twootMML = sourceText.replace('\n', '').match(/#MML (.*?)\|\|(.*)/);
       // console.log(sourceText)
-      console.log(mml)
-      if (mml) {
-        const meta = mml[1];
+      console.log(twootMML);
+      if (twootMML) {
+        const meta = twootMML[1];
         const index = meta.match(/INDEX:(.*)/)[1];
-        mmls.push({index: index, mml:mml[2]});
+        mmls.push({index: index, mml:twootMML[2]});
         console.log(mmls);
         targetContent.parentNode.appendChild(playmmlButton);
         playmmlButton.addEventListener('click', function (e) {
@@ -54,11 +54,11 @@
                 return 0;
             });
             console.log(mmls);
-            var pmml = [];
+            var mml = [];
             mmls.map(function (m) {
-              pmml.push(m.mml);
+              mml.push(m.mml);
             });
-            playmml(pmml.join(''));
+            playmml(mml.join(''));
           }
           , false);
       }

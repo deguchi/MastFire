@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "TSS Ctrl-C MML Player",
-  "short_name": "TSSCC",
-  "description": "Control-C MML Player",
+  "name": "MastoFire",
+  "short_name": "MastoFire",
+  "description": "MML Player on Mastodon",
   "version": "1.0.3",
   "icons": {
     "16": "tsscc16.png",
